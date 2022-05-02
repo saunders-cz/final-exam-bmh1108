@@ -4,7 +4,7 @@ import {
     Grid,
     TextField,
     Typography,
-  } from "@mui/material";
+  } from "@material-ui/core";
 import { Checkbox } from "@mui/material";
   import { useFormik } from "formik";
   import * as yup from "yup";

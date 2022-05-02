@@ -10,7 +10,7 @@ export const HomePage = () => {
         </Typography>
       </Grid>
       <Grid item xs={12} align="center">
-        <img src="./img/Benny's.png" />
+        <img src="./img/Benny's.png" alt="Benny's Bakery"/>
       </Grid>
       <Grid container justifyContent="center">
         <Grid item xs={7}>

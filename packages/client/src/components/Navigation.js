@@ -25,16 +25,16 @@ export const Navigation = () => {
           <Link to="/">Home</Link>
         </StyledItem>
         <StyledItem>
-          <Link to="/menu">Menu</Link>
+          <Link to="menu">Menu</Link>
         </StyledItem>
         <StyledItem>
-          <Link to="/order">Order</Link>
+          <Link to="order">Order</Link>
         </StyledItem>
         <StyledItem>
-          <Link to="/register">Register</Link>
+          <Link to="register">Register</Link>
         </StyledItem>
         <StyledItem>
-          <Link to="/manage">Manage</Link>
+          <Link to="admin">Admin</Link>
         </StyledItem>
       </MenuList>
     </nav>

@@ -11,16 +11,15 @@ export const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route>
-          <Route path="/" element={<Layout />} />
-          <Route index element={<HomePage />} />
-          <Route path="home" element={<HomePage />} />
-        </Route>
+        <Route path="/" element={<Layout />} />
+        <Route index element={<HomePage />} />
+        <Route path="home" element={<HomePage />} />
         <Route>
           <Route path="menu" element={<MenuPage />} />
           <Route path="register" element={<RegistrationPage />} />
           <Route path="order" element={<OrderPage />} />
           <Route path="admin" element={<AdminPage />} />
+          <Route path="pastry/:id" element={<AdminPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
