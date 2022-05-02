@@ -7,5 +7,10 @@
     "start": "lerna exec --parallel npm run start"
   },
   "author": "C. Zoellick",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "install": "^0.13.0",
+    "npm": "^8.8.0"
+  }
 }
