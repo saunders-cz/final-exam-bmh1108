@@ -22,9 +22,9 @@ export const PastryList = ({ pastries }) => {
               alt={pastry.name}
             />
             <CardContent>
-              <Typography variant="h5">{pastry.name}</Typography>
-              <Typography variant="h4">{pastry.origin}, {pastry.price}</Typography>
-              <Typography variant="body">{pastry.description}</Typography>
+              <Typography variant="h4">{pastry.name}</Typography>
+              <Typography variant="h6">${pastry.price}</Typography>
+              <Typography variant="body">{pastry.origin}; {pastry.description}</Typography>
             </CardContent>
             <CardActions>
               <Button>Add to Cart</Button>
