@@ -7,6 +7,7 @@ import { Router } from "./Router";
 import { Container } from "@mui/material";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { CartProvider } from "./modules/cart/CartContext.js";
 
 const client = new ApolloClient({
   uri: "/graphql/",
@@ -15,12 +16,14 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
-      <Container>
-        <Router />
-        <ToastContainer />
-      </Container>
-    </ApolloProvider>
+    <CartProvider>
+      <ApolloProvider client={client}>
+        <Container>
+          <Router />
+          <ToastContainer />
+        </Container>
+      </ApolloProvider>
+    </CartProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

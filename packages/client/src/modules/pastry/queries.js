@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
 export const GET_PASTRIES = gql`
-Query GET_PASTRIES {
+query GET_PASTRIES {
   pastries {
     id
     name
