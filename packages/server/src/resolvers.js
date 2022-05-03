@@ -18,4 +18,21 @@ export const resolvers = {
       return await Category.findAll({ include: Pastry });
     },
   },
+  Mutation: {
+    addPastry: async (parent, args) => {
+      const { input } = args;
+      await Pastry.create(input);
+      return { ok: true };
+    },
+    updatePastry: async (parent, { id, input }) => {
+      await Pastry.update(input, {
+        where: { id },
+      });
+      return { ok: true };
+    },
+    deletePastry: async (parent, { id }) => {
+      await Pastry.destroy({ where: { id } });
+      return { ok: true };
+    },
+  },
 };

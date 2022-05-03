@@ -1,7 +1,7 @@
 import { React } from "react";
 import { Grid, Typography } from "@mui/material";
 import { useQuery } from "@apollo/client";
-import { GET_PASTRY_CATEGORIES } from "../pastry/queries.js";
+import { GET_PASTRY_CATEGORIES } from "./queries.js";
 import { PastryList } from "../pastry/PastryList.js";
 
 export const CategoryList = () => {
