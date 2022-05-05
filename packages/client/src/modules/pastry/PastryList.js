@@ -8,8 +8,13 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+import { useCart } from "../../modules/cart/CartContext.js";
 
 export const PastryList = ({ pastries }) => {
+  const { id } = pastries;
+  const cart = useCart();
+  const onAddItem = (itemId) => cart.addItem(itemId);
+  
   return (
     <Grid container spacing={2}>
       {pastries.map((pastry, i) => (
@@ -24,10 +29,12 @@ export const PastryList = ({ pastries }) => {
             <CardContent>
               <Typography variant="h4">{pastry.name}</Typography>
               <Typography variant="h6">${pastry.price}</Typography>
-              <Typography variant="body">{pastry.origin}; {pastry.description}</Typography>
+              <Typography variant="body">
+                {pastry.origin}; {pastry.description}
+              </Typography>
             </CardContent>
             <CardActions>
-              <Button>Add to Cart</Button>
+              <Button onClick={() => onAddItem(id)}>Add to Cart</Button>
             </CardActions>
           </Card>
         </Grid>
