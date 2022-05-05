@@ -4,7 +4,7 @@ import {
     Grid,
     TextField,
     Typography,
-  } from "@material-ui/core";
+  } from "@mui/material";
 import { Checkbox } from "@mui/material";
   import { useFormik } from "formik";
   import * as yup from "yup";
@@ -43,7 +43,7 @@ import { Checkbox } from "@mui/material";
         <Container>
           <Grid container spacing={2}/>
             <Grid item xs={12}>
-              <Typography variant="h3">Let us know who you are!</Typography>
+              <Typography variant="h4">Let us know who you are!</Typography>
             </Grid>
             <Grid item xs={12}>
               <TextField
@@ -119,7 +119,7 @@ import { Checkbox } from "@mui/material";
             </Grid>
             <Grid item xs={12}>
               <Typography variant="h6">
-                Click the button below to be added to our mailing list!
+                Check the button below to be added to our mailing list!
               </Typography>
               </Grid>
             <Grid item xs={12}>

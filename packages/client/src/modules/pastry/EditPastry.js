@@ -18,6 +18,6 @@ export const EditPastry = ({ onClose }) => {
   if (loading) return <Typography>Loading...</Typography>;
 
   return (
-    <PastryForm id={params.id} initialValues={data.book} onClose={onClose} />
+    <PastryForm id={params.id} initialValues={data.pastry} onClose={onClose} />
   );
 };

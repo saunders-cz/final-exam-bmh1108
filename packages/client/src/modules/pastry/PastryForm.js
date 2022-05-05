@@ -12,7 +12,7 @@ const validationSchema = yup.object({
   name: yup.string().required().label("Name"),
   origin: yup.string().required().label("Origin"),
   description: yup.string().required().label("Description"),
-  price: yup.number().required().label("Price"),
+  price: yup.number().required().label("Price").min(0.75),
   categoryId: yup.string().required().label("Category"),
 });
 
@@ -40,8 +40,8 @@ export const PastryForm = ({ id, initialValues, onClose }) => {
       console.log(`Pastry ID: ${id}`);
       console.log("Values:", values);
 
-      const { name, origin, description, imgsrc, categoryId, price } = values;
-      const input = { name, origin, description, imgsrc, categoryId, price };
+      const { title, origin, description, imgsrc, categoryId, price } = values;
+      const input = { title, origin, description, imgsrc, categoryId, price };
 
       console.log(input);
 
@@ -59,7 +59,7 @@ export const PastryForm = ({ id, initialValues, onClose }) => {
       <Grid container spacing={2} direction="column">
         <Grid item>
           <Typography variant="h3">
-            {id !== undefined ? "Edit" : "Add"} Pastry
+            {id !== undefined ? "Edit" : "Add"} Meal
           </Typography>
         </Grid>
         <Grid item>

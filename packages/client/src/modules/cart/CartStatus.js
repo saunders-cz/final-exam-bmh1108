@@ -1,4 +1,4 @@
-import { Badge, Icon, Popover, Tooltip, Typography } from "@material-ui/core";
+import { Badge, Icon, Popover, Tooltip, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";

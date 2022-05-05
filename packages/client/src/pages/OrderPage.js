@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@mui/material";
 import React from "react";
 import { CartContentsDetail } from "../modules/cart/CartContentsDetail.js";
 import { useCart } from "../modules/cart/CartContext.js";

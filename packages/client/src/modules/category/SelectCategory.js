@@ -20,8 +20,6 @@ export const SelectCategory = ({
   style,
 }) => {
   const { data, loading } = useQuery(GET_PASTRY_CATEGORIES);
-  if (error) return <p>Error: {error.message}</p>;
-  if (loading) return <p>Loading...</p>;
 
   return (
     <FormControl style={style}>
@@ -40,7 +38,7 @@ export const SelectCategory = ({
         >
           {data.categories.map((c, i) => (
             <MenuItem key={i} value={c.id}>
-              {c.title}
+              {c.name}
             </MenuItem>
           ))}
         </Select>

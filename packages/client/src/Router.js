@@ -22,7 +22,7 @@ export const Router = () => {
         <Route path="order" element={<OrderPage />} />
         <Route index element={<AdminPage />} />
         <Route path="admin" element={<AdminPage />} />
-        <Route path="pastry/:id" element={<AdminPage />} />
+        <Route path="menu/:id" element={<AdminPage />} />
       </Routes>
     </BrowserRouter>
   );

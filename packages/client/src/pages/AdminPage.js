@@ -35,10 +35,10 @@ export const AdminPage = () => {
         </Grid>
       </Grid>
       {showEditPastry && (
-        <Dialog open={true} onClose={() => navigate("/")}>
+        <Dialog open={true} onClose={() => navigate("/admin")}>
           <DialogTitle />
           <DialogContent>
-            <EditPastry onClose={() => navigate("/")} />
+            <EditPastry onClose={() => navigate("/admin")} />
           </DialogContent>
         </Dialog>
       )}

@@ -4,7 +4,7 @@ import {
     Icon,
     IconButton,
     Typography,
-  } from "@material-ui/core";
+  } from "@mui/material";
   import React from "react";
   import { pastries } from "../pastry/pastryData.js";
   import { useCart } from "./CartContext";

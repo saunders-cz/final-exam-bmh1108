@@ -26,7 +26,7 @@ export const PastryTable = () => {
   if (error) return <Typography color="error">{error.message}</Typography>;
   if (loading) return <Typography>Loading...</Typography>;
 
-  const { PASTRIES } = data;
+  const { pastries } = data;
 
   const columns = [
     { field: "name", headerName: "Name", width: 350 },
@@ -73,7 +73,7 @@ export const PastryTable = () => {
   return (
     <>
       <div style={{ height: 800, width: 900 }}>
-        <DataGrid rows={PASTRIES} columns={columns} />
+        <DataGrid rows={pastries} columns={columns} />
       </div>
       {deleteResult.error && (
         <div>Error deleting pastry: {deleteResult.error.message}</div>
