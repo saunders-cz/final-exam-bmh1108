@@ -7,5 +7,9 @@
     "start": "lerna exec --parallel npm run start"
   },
   "author": "C. Zoellick",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "install": "^0.13.0",
+    "npm": "^8.8.0"
+  }
 }
