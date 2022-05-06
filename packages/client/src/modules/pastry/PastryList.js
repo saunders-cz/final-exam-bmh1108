@@ -13,7 +13,7 @@ import { useCart } from "../../modules/cart/CartContext.js";
 export const PastryList = ({ pastries }) => {
   const { id } = pastries;
   const cart = useCart();
-  const onAddItem = (itemId) => cart.addItem(itemId);
+  const onAddItem = (pastryId) => cart.addItem(pastryId);
   
   return (
     <Grid container spacing={2}>

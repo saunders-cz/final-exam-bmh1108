@@ -9,59 +9,59 @@ export const CartProvider = ({ children }) => {
     itemCount: 0,
   });
 
-  const addPastry = (pastryId) => {
-    let pastries = [...state.pastries];
-    const existingPastry = pastries.find((i) => i.id === pastryId);
-    if (existingPastry !== undefined) {
-      existingPastry.qty++;
+  const addItem = (pastryId) => {
+    let items = [...state.items];
+    const existingItem = items.find((i) => i.id === pastryId);
+    if (existingItem !== undefined) {
+      existingItem.qty++;
       setState({
         ...state,
-        pastries,
-        hasPastries: true,
-        pastryCount: getPastryCount(pastries),
+        items,
+        hasItems: true,
+        itemCount: getItemCount(items),
       });
     } else {
-      pastries = [...pastries, { id: pastryId, qty: 1 }];
+      items = [...items, { id: pastryId, qty: 1 }];
       setState({
         ...state,
-        pastries,
-        hasPastries: true,
-        pastryCount: getPastryCount(pastries),
+        items,
+        hasItems: true,
+        itemCount: getItemCount(items),
       });
     }
   };
 
-  const updatePastryQuantity = (pastryId, newQuantity) => {
-    const pastries = [...state.pastries];
-    const pastry = pastries.find((pastry) => pastry.id === pastryId);
+  const updateItemQuantity = (pastryId, newQuantity) => {
+    const items = [...state.items];
+    const item = items.find((item) => item.id === pastryId);
 
-    if (pastry === undefined) {
+    if (item === undefined) {
       console.error(
-        `Pastry id ${pastryId} not found when trying to update quantity.`
+        `Pastry ID ${pastryId} not found when trying to update quantity.`
       );
       return;
     }
 
     if (newQuantity === 0) {
-      pastries.splice(
-        pastries.findIndex((i) => i.id === pastryId),
+      items.splice(
+        items.findIndex((i) => i.id === pastryId),
         1
       );
     } else {
-      pastry.qty = newQuantity;
+      item.qty = newQuantity;
     }
 
     setState({
       ...state,
-      pastries,
+      items,
     });
   };
 
-  const getPastryCount = (pastries) => {
+  const getItemCount = (items) => {
     let count = 0;
-    for (let i = 0; i < pastries.length; i++) {
-      const pastry = pastries[i];
-      count += pastry.qty;
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
+      count += item.qty;
     }
     return count;
   };
@@ -70,8 +70,8 @@ export const CartProvider = ({ children }) => {
     <context.Provider
       value={{
         ...state,
-        addPastry,
-        updatePastryQuantity,
+        addItem,
+        updateItemQuantity,
       }}
     >
       {children}

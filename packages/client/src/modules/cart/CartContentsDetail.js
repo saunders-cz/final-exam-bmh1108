@@ -1,16 +1,10 @@
-import {
-  ButtonGroup,
-  Grid,
-  Icon,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import { ButtonGroup, Grid, Icon, IconButton, Typography } from "@mui/material";
 import React from "react";
 import { pastries } from "../pastry/pastryData.js";
 import { useCart } from "./CartContext";
 
-const getFoodItem = (id) => {
-  return pastries.find((p) => p.id === id);
+const getpastry = (id) => {
+  return pastries.find((fi) => fi.id === id);
 };
 
 export const CartContentsDetail = () => {
@@ -19,7 +13,7 @@ export const CartContentsDetail = () => {
   return (
     <Grid container style={{ maxWidth: 400 }} direction="column">
       {items.map((item, i) => {
-        const foodItem = getFoodItem(item.id);
+        const pastry = getpastry(item.id);
         return (
           <Grid
             item
@@ -30,7 +24,7 @@ export const CartContentsDetail = () => {
           >
             <Grid item>
               <Typography variant="body1" gutterBottom>
-                {foodItem.title} x {item.qty} @ ${foodItem.price}
+                {pastry.name} x {item.qty} @ ${pastry.price}
               </Typography>
             </Grid>
             <Grid item>
